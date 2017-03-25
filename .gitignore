@@ -1,3 +1,4 @@
 *.pyc
 venv
 *expanded.csv
+Inverted_Tax_Plan.egg-info
