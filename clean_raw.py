@@ -6,8 +6,8 @@ from sys import argv
 
 
 def clean_int_str(int_str):
-    int_str = int_str.replace("Under","0").replace("over","inf")
-    return int_str.replace("$","").replace(",","")
+    int_str = int_str.replace("Under","0").replace("over","1000000000000")
+    return int(int_str.replace("$","").replace(",",""))
 
 
 def process_line_dict(line_dict):
@@ -20,9 +20,9 @@ def process_line_dict(line_dict):
     return {
         "bracket_min": bracket_min,
         "bracket_max": bracket_max,
-        "number": num,
-        "mean": mean,
-        "stderr": stderr,
+        "number": num*1000,
+        "mean": mean*1000,
+        "stderr": stderr*1000,
     }
 
 
