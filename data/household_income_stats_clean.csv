@@ -1,4 +1,4 @@
-bracket_min,bracket_max,number,mean,stderr
+bracket_min,bracket_max,number,mean,std_err
 0,5000,4235000,1080000,40000
 5000,9999,4071000,8018000,31000
 10000,14999,6324000,12397000,30000

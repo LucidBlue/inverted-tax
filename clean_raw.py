@@ -22,7 +22,7 @@ def process_line_dict(line_dict):
         "bracket_max": bracket_max,
         "number": num*1000,
         "mean": mean*1000,
-        "stderr": stderr*1000,
+        "std_err": stderr*1000,
     }
 
 
@@ -35,7 +35,7 @@ out_filename = filename.replace("raw", "clean") + ext
 with open(raw_filename, "rt") as raw_file, open(out_filename, "wt") as out_file:
     reader = csv.DictReader(raw_file, dialect="excel")
     writer = csv.DictWriter(out_file,
-        ["bracket_min", "bracket_max", "number", "mean", "stderr"])
+        ["bracket_min", "bracket_max", "number", "mean", "std_err"])
     writer.writeheader()
     for line in reader:
         new_line = process_line_dict(line)
