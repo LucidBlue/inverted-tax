@@ -1,4 +1,4 @@
-Income bracket,Number (1000s),Mean (1000s),Standard Error
+Income bracket,Number (1000s),Mean,Standard Error
 "Under $5,000","4,235","1,080",40
 "$5,000 to $9,999","4,071","8,018",31
 "$10,000 to $14,999","6,324","12,397",30

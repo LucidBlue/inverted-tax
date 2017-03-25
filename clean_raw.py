@@ -15,14 +15,14 @@ def process_line_dict(line_dict):
     bracket_min = clean_int_str(bracket_list[0])
     bracket_max = clean_int_str(bracket_list[-1])
     num = clean_int_str(line_dict["Number (1000s)"])
-    mean = clean_int_str(line_dict["Mean (1000s)"])
+    mean = clean_int_str(line_dict["Mean"])
     stderr = clean_int_str(line_dict["Standard Error"])
     return {
         "bracket_min": bracket_min,
         "bracket_max": bracket_max,
         "number": num*1000,
-        "mean": mean*1000,
-        "std_err": stderr*1000,
+        "mean": mean,
+        "std_err": stderr,
     }
 
 
@@ -35,7 +35,7 @@ out_filename = filename.replace("raw", "clean") + ext
 with open(raw_filename, "rt") as raw_file, open(out_filename, "wt") as out_file:
     reader = csv.DictReader(raw_file, dialect="excel")
     writer = csv.DictWriter(out_file,
-        ["bracket_min", "bracket_max", "number", "mean", "std_err"])
+        ["bracket_min", "bracket_max", "mean", "std_err", "number"])
     writer.writeheader()
     for line in reader:
         new_line = process_line_dict(line)
