@@ -1,0 +1,13 @@
+# From Wikipedia: https://en.wikipedia.org/wiki/2015_United_States_federal_budget
+# In billions of dollars
+source,requested,enacted,actual
+individual,"1,534","1,478","1,540"
+corporate,"449","342","344"
+"social security","1,056","1,065","1,065"
+"excise","111","96","98"
+"customs duties","37","37","35"
+"estate and gift","18","20",19"
+"federal reserve","88","94","96"
+"immigration reform allowance","2","NaN","NaN"
+miscellaneous,"43","45","50"
+total,"3,337","3,176","3,249"
